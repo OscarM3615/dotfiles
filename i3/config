@@ -1,0 +1,168 @@
+# Set Super as mod key
+set $mod Mod4
+
+# Enable gaps
+gaps inner 10
+
+# Font for window titles
+font pango:FiraCode 10
+
+# Colour variables
+set $black0 #282c34
+set $black1 #3e4452
+set $red0 #e06c75
+set $red1 #be5046
+set $green #98c379
+set $yellow0 #e5c07b
+set $yellow1 #d19a66
+set $blue #61afef
+set $purple #c678dd
+set $cyan #56b6c2
+set $gray0 #abb2bf
+set $gray1 #5c6370
+
+# class                 border  background      text    indicator
+client.focused          $red0   $red0           $black0 $red0
+client.focused_inactive $black0 $black0         $gray0  $black0
+client.unfocused        $black0 $black0         $gray0  $black0
+client.urgent           $red1   $red1           $black0 $red1
+
+# Start XDG autostart .desktop files using dex
+exec --no-startup-id dex --autostart --environment i3
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen
+exec --no-startup-id xss-lock -l -- i3lock -c 282c34 --nofork
+
+# PulseAudio controls
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
+
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioNext exec --no-startup-id mpc next
+
+# Enable binding for screen lock
+bindsym $mod+l exec --no-startup-id loginctl lock-session
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# Start a terminal
+bindsym $mod+Return exec --no-startup-id qterminal
+
+# Start a web browser
+bindsym $mod+space exec --no-startup-id google-chrome-stable
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Start rofi (a program launcher)
+bindsym $mod+d exec --no-startup-id rofi -show drun
+
+# Change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split direction
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Define names for default workspaces
+set $ws1 "1:  Home"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10:  Spotify"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Assign applications to workspaces
+for_window [class="Spotify"] move to workspace $ws10
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Exit' 'i3-msg exit'"
+
+# Print screen
+bindsym Print exec --no-startup-id flameshot gui
+
+# Resize window
+mode "resize" {
+        # Pressing left will shrink the window’s width
+        # Pressing right will grow the window’s width
+        # Pressing up will grow the window’s height
+        # Pressing down will shrink the window’s height
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+
+        # Back to normal: Escape or Super+r
+        bindsym $mod+r mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Start scripts
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id picom -f
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
+exec --no-startup-id xset r rate 250 20
+exec --no-startup-id nm-applet
+exec --no-startup-id dunst
