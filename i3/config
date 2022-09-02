@@ -63,7 +63,7 @@ bindsym $mod+space exec --no-startup-id google-chrome-stable
 bindsym $mod+q kill
 
 # Start rofi (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun -modi drun
 
 # Change focus
 bindsym $mod+Left focus left
