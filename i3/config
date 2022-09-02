@@ -43,9 +43,9 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5%
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5%
 
 # Media player controls
-bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-bindsym XF86AudioPrev exec --no-startup-id mpc prev
-bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Enable binding for screen lock
 bindsym $mod+l exec --no-startup-id loginctl lock-session
