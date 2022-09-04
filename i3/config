@@ -32,7 +32,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen
-exec --no-startup-id xss-lock -l -- i3lock -c 282c34 --nofork
+# exec --no-startup-id xss-lock -l -- i3lock -c 282c34 --nofork
 
 # Start gnome keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
@@ -48,7 +48,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Enable binding for screen lock
-bindsym $mod+l exec --no-startup-id loginctl lock-session
+bindsym $mod+l exec --no-startup-id light-locker-command --lock
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -168,8 +168,10 @@ bindsym $mod+r mode "resize"
 # Start scripts
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id picom -f
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.png
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.png
 exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
 exec --no-startup-id xset r rate 250 20
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
+exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
