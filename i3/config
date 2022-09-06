@@ -154,6 +154,7 @@ bindsym $mod+Control+Right move workspace to output right
 
 # Assign applications to workspaces
 for_window [class="discord"] move to workspace $ws8
+for_window [class="Droidcam"] move to workspace $ws8
 for_window [class="Spotify"] move to workspace $ws10
 
 # Reload the configuration file
