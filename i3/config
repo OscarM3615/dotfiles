@@ -7,6 +7,9 @@ gaps inner 10
 # Font for window titles
 font pango:FiraCode 10
 
+# Window title alignment
+title_align center
+
 # Colour variables
 set $black0 #282c34
 set $black1 #3e4452
@@ -94,16 +97,32 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Control+space floating toggle
 
 # Define names for default workspaces
-set $ws1 "1:  Home"
+set $ws1 "1: "
 set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7:  Servers"
-set $ws8 "8:  Communication"
-set $ws9 "9:  Tasks"
-set $ws10 "10:  Spotify"
+set $ws6 "6: "
+set $ws7 "7: "
+set $ws8 "8: "
+set $ws9 "9: "
+set $ws10 "10: "
+
+# Define variables for screens
+set $screen_left VGA-0
+set $screen_right LVDS-0
+
+# Assign workspaces to screens
+workspace $ws1 output $screen_left
+workspace $ws2 output $screen_left
+workspace $ws3 output $screen_left
+workspace $ws4 output $screen_left
+workspace $ws5 output $screen_left
+workspace $ws6 output $screen_right
+workspace $ws7 output $screen_right
+workspace $ws8 output $screen_right
+workspace $ws9 output $screen_right
+workspace $ws10 output $screen_right
 
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
