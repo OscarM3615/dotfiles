@@ -58,6 +58,7 @@ bindsym $mod+Return exec --no-startup-id qterminal
 
 # Start a web browser
 bindsym $mod+space exec --no-startup-id google-chrome-stable
+bindsym $mod+Shift+space exec --no-startup-id google-chrome-stable --incognito
 
 # Kill focused window
 bindsym $mod+q kill
@@ -90,7 +91,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Control+space floating toggle
 
 # Define names for default workspaces
 set $ws1 "1:  Home"
@@ -173,5 +174,6 @@ exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ra
 exec --no-startup-id xset r rate 250 20
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
+exec --no-startup-id xrandr --auto --output VGA-0 --mode 1366x768 --left-of LVDS-0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
