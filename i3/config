@@ -112,12 +112,12 @@ set $ws10 "10: "
 set $screen_left VGA-0
 set $screen_right LVDS-0
 
-# Assign workspaces to screens
-workspace $ws1 output $screen_left
-workspace $ws2 output $screen_left
-workspace $ws3 output $screen_left
-workspace $ws4 output $screen_left
-workspace $ws5 output $screen_left
+# Assign workspaces to screens (fallback to LVDS-0 when no dual monitor available)
+workspace $ws1 output $screen_left $screen_right
+workspace $ws2 output $screen_left $screen_right
+workspace $ws3 output $screen_left $screen_right
+workspace $ws4 output $screen_left $screen_right
+workspace $ws5 output $screen_left $screen_right
 workspace $ws6 output $screen_right
 workspace $ws7 output $screen_right
 workspace $ws8 output $screen_right
@@ -194,6 +194,6 @@ exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ra
 exec --no-startup-id xset r rate 250 20
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
-exec --no-startup-id xrandr --auto --output VGA-0 --mode 1366x768 --left-of LVDS-0
+exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
