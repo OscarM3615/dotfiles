@@ -187,13 +187,13 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start scripts
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id picom -f
-exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.png
-exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
-exec --no-startup-id xset r rate 250 20
-exec --no-startup-id nm-applet
-exec --no-startup-id dunst
 exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
+exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
+exec --no-startup-id xset r rate 250 20
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.png
+exec_always --no-startup-id picom -f
+exec --no-startup-id dunst
+exec --no-startup-id nm-applet
