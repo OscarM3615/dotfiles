@@ -170,7 +170,8 @@ bindsym $mod+Shift+q exec --no-startup-id rofi -show power -modi power:~/.config
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Exit' 'i3-msg exit'"
 
 # Print screen
-bindsym Print exec --no-startup-id flameshot gui
+bindsym Print exec --no-startup-id flameshot screen
+bindsym Shift+Print exec --no-startup-id flameshot gui
 
 # Resize window
 mode "resize" {
