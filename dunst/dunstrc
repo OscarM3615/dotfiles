@@ -6,6 +6,6 @@ gap_size = 8
 font = Fira Code 12
 background = "#282c34"
 foreground = "#abb2bf"
-frame_color = "#282c34"
+frame_color = "#3e4452"
 min_icon_size = 64
 max_icon_size = 64
