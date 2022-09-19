@@ -77,6 +77,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# User configuration
+export DENO_INSTALL="/home/oscarm3615/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Highlight theme (for ranger)
 export HIGHLIGHT_STYLE=base16/onedark
 
@@ -119,6 +123,4 @@ function cd() {
 	fi
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/share/nvm/init-nvm.sh
