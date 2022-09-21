@@ -109,7 +109,7 @@ set $ws9 "9: "
 set $ws10 "10: "
 
 # Define variables for screens
-set $screen_left HDMI-0
+set $screen_left VGA-0
 set $screen_right LVDS-0
 
 # Assign workspaces to screens (fallback to LVDS-0 when no dual monitor available)
@@ -200,7 +200,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start scripts
-exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of HDMI-0
+exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
 exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
