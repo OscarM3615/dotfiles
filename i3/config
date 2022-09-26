@@ -59,10 +59,6 @@ floating_modifier $mod
 # Start a terminal
 bindsym $mod+Return exec --no-startup-id qterminal
 
-# Start a web browser
-bindsym $mod+space exec --no-startup-id google-chrome-stable
-bindsym $mod+Shift+space exec --no-startup-id google-chrome-stable --incognito
-
 # Kill focused window
 bindsym $mod+q kill
 
@@ -89,9 +85,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # Change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+w layout tabbed
+bindsym $mod+Shift+e layout toggle split
 
 # Toggle tiling / floating
 bindsym $mod+Control+space floating toggle
@@ -175,16 +171,6 @@ bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Power menu
-bindsym $mod+Shift+q exec --no-startup-id rofi -show power -modi power:~/.config/polybar/scripts/rofi-power-menu
-
-# Exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Exit' 'i3-msg exit'"
-
-# Print screen
-bindsym Print exec --no-startup-id flameshot screen
-bindsym Shift+Print exec --no-startup-id flameshot gui
-
 # Resize window
 mode "resize" {
         bindsym Left resize shrink width 10 px or 10 ppt
@@ -198,6 +184,19 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+# Power menu
+bindsym $mod+Shift+q exec --no-startup-id rofi -show power -modi power:~/.config/polybar/scripts/rofi-power-menu
+
+# Print screen
+bindsym Print exec --no-startup-id flameshot screen
+bindsym Shift+Print exec --no-startup-id flameshot gui
+
+# Applications
+bindsym $mod+space exec --no-startup-id google-chrome-stable
+bindsym $mod+Shift+space exec --no-startup-id google-chrome-stable --incognito
+bindsym $mod+e exec --no-startup-id thunar
+bindsym $mod+s exec --no-startup-id spotify
 
 # Start scripts
 exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
