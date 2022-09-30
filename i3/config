@@ -105,20 +105,20 @@ set $ws9 "9: "
 set $ws10 "10: "
 
 # Define variables for screens
-set $screen_left VGA-0
-set $screen_right LVDS-0
+set $screen_left LVDS-0
+set $screen_right VGA-0
 
 # Assign workspaces to screens (fallback to LVDS-0 when no dual monitor available)
-workspace $ws1 output $screen_left $screen_right
-workspace $ws2 output $screen_left $screen_right
-workspace $ws3 output $screen_left $screen_right
-workspace $ws4 output $screen_left $screen_right
-workspace $ws5 output $screen_left $screen_right
-workspace $ws6 output $screen_right
-workspace $ws7 output $screen_right
-workspace $ws8 output $screen_right
-workspace $ws9 output $screen_right
-workspace $ws10 output $screen_right
+workspace $ws1 output $screen_left
+workspace $ws2 output $screen_left
+workspace $ws3 output $screen_left
+workspace $ws4 output $screen_left
+workspace $ws5 output $screen_left
+workspace $ws6 output $screen_right $screen_left
+workspace $ws7 output $screen_right $screen_left
+workspace $ws8 output $screen_right $screen_left
+workspace $ws9 output $screen_right $screen_left
+workspace $ws10 output $screen_right $screen_left
 
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -199,7 +199,7 @@ bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+s exec --no-startup-id spotify
 
 # Start scripts
-exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
+exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --left-of VGA-0
 exec --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
