@@ -7,8 +7,11 @@ load_dotenv(envfile)
 
 API_KEY = os.environ.get('CLICKUP_API_KEY', '')
 
-response = requests.get(
-    'https://api.clickup.com/api/v2/folder/114538688', headers={'Authorization': API_KEY})
+try:
+    response = requests.get(
+        'https://api.clickup.com/api/v2/folder/114538688', headers={'Authorization': API_KEY})
+except requests.exceptions.ConnectionError:
+    exit()
 
 if not response.ok:
     exit()
