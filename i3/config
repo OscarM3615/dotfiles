@@ -167,6 +167,9 @@ for_window [class="Droidcam"] move to workspace $ws8
 for_window [class="Google-chrome" title="ClickUp"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
+# Default floating windows
+for_window[class="Orage"] floating enable
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
