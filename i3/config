@@ -25,7 +25,7 @@ set $gray0 #abb2bf
 set $gray1 #5c6370
 
 # class                 border  background      text    indicator
-client.focused          $red0   $red0           $black0 $red0
+client.focused          $red0   $red0           $black0 $red1
 client.focused_inactive $black0 $black0         $gray0  $black0
 client.unfocused        $black0 $black0         $gray0  $black0
 client.urgent           $red1   $red1           $black0 $red1
