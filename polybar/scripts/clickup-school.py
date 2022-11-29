@@ -23,4 +23,4 @@ for lst in data['lists']:
     task_count += lst.get('task_count', 0)
 
 if task_count > 0:
-    print(task_count)
+    print(' ', task_count)
