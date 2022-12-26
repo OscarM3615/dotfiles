@@ -43,6 +43,12 @@ Terminal emulator.
 - Move the ini file to ~/.config/qterminal.org/
 - Move the colour scheme to /usr/share/qtermwidget5/color-schemes/
 
+## ranger
+
+Terminal-based file manager.
+
+- Move the rc.conf file to ~/.config/ranger/
+
 ## rofi
 
 Application launcher.
