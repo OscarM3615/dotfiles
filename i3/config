@@ -33,9 +33,8 @@ client.urgent           $red1   $red1           $black0 $red1
 # Start XDG autostart .desktop files using dex
 exec --no-startup-id dex --autostart --environment i3
 
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen
-# exec --no-startup-id xss-lock -l -- i3lock -c 282c34 --nofork
+# Enable auto lock for 5 minutes
+exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session" -detectsleep
 
 # Start gnome keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
@@ -49,6 +48,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
+
+# Brightness controls
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
 
 # Enable binding for screen lock
 bindsym $mod+l exec --no-startup-id loginctl lock-session
