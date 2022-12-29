@@ -2,6 +2,12 @@
 
 Configuration files for Arch Linux with i3
 
+## Xprofile
+
+X server config.
+
+Move file .xprofile to ~
+
 ## dunst
 
 Notifications daemon.
@@ -14,8 +20,7 @@ Tiling window manager.
 
 Includes colour palette, layout, keybindigs and startup of apps.
 
-- Move config file to ~/.config/i3/
-- Move wallpaper to ~/Pictures/wallpaper.png
+Move config file to ~/.config/i3/
 
 ## neofetch
 

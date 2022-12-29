@@ -51,7 +51,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 
 # Enable binding for screen lock
-bindsym $mod+l exec --no-startup-id light-locker-command --lock
+bindsym $mod+l exec --no-startup-id loginctl lock-session
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
