@@ -7,7 +7,9 @@ gaps inner 10
 # Font for window titles
 font pango:FiraCode 10
 
-# Window title alignment
+# Window border style
+default_border pixel
+default_floating_border normal
 title_align center
 
 # Colour variables
