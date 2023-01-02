@@ -1,68 +1,108 @@
-# dotfiles
+# OscarM3615 dotfiles
 
-Configuration files for Arch Linux with i3
+![Desktop Screenshot](screenshot.png)
 
-## Xprofile
+## Requirements
 
-X server config.
+### Packages
 
-Move file .xprofile to ~
+- git
+- zsh
+- i3 (gaps)
+  - dunst
+  - QTerminal
+  - picom
+  - rofi
+  - xautolock
+  - gnome-keyring-daemon
+  - amixer
+  - playerctl
+  - brightnessctl
+  - loginctl
+  - flameshot
+  - feh
+  - nm-applet
+  - blueman-applet
+- betterlockscreen
+- polybar
+  - pacman-contrib
+  - dbus-python
+- ranger
 
-## betterlockscreen
+### Fonts
 
-Lock screen (i3lock wrapper).
+- Fira Code Nerd Font
+- Noto Fonts
+- Noto Fonts CJK
+- Font Awesome
+- TTF Unifont
 
-Move file to ~/.config/
+## Installation
 
-## dunst
+Clone the repo into the home folder.
 
-Notifications daemon.
+```sh
+git clone https://github.com/OscarM3615/dotfiles.git .dotfiles
+```
 
-Move file to ~/.config/dunst/
+Install OhMyZSH following [its instructions](https://ohmyz.sh/).
 
-## i3
+Link the dotfiles with the following commands:
 
-Tiling window manager.
+```sh
+ln -s ~/.dotfiles/.xprofile ~
 
-Includes colour palette, layout, keybindigs and startup of apps.
+ln -s ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/
 
-Move config file to ~/.config/i3/
+ln -s ~/.dotfiles/dunst/ ~/.config/dunst/
 
-## neofetch
+ln -s ~/.dotfiles/i3/ ~/.config/i3/
 
-System information tool.
+ln -s ~/.dotfiles/neofetch/ ~/.config/neofetch/
 
-Move file to ~/.config/neofetch/
+ln -s ~/.dotfiles/omz/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/omz/oscarm3615.zsh-theme ~/.oh-my-zsh/custom-themes/
 
-## oh-my-zsh
+ln -s ~/.dotfiles/picom/ ~/.config/picom/
 
-ZSH framework.
+ln -s ~/.dotfiles/polybar/ ~/.config/polybar/
 
-- Move .zshrc file to user's home directory
-- Move theme to ~/.oh-my-zsh/custom/themes/
+mkdir -p ~/.config/qterminal/
+mv ~/.dotfiles/qterminal/qterminal.ini ~/.config/qterminal/
+sudo mv ~/.dotfiles/qterminal/OneDark.colorscheme /usr/share/qtermwidget5/color-schemes/
 
-## polybar
+ln -s ~/.dotfiles/ranger/ ~/.config/ranger/
 
-Status bar.
+mkdir -p ~/.config/rofi/
+ln -s ~/.dotfiles/rofi/config.rasi ~/.config/rofi/
+mv ~/.dotfiles/rofi/onedark.rasi ~/.local/share/rofi/themes/
+```
 
-Move the entire directory content to ~/.config/polybar/
+## Recommended
 
-## qterminal
+Install vim and its own settings.
 
-Terminal emulator.
+Install vim:
 
-- Move the ini file to ~/.config/qterminal.org/
-- Move the colour scheme to /usr/share/qtermwidget5/color-schemes/
+```sh
+# Install dependencies
+sudo pacman -S nodejs npm yarn
 
-## ranger
+# Install vim
+sudo pacman -S vim
 
-Terminal-based file manager.
+# Alternative, to enable X11 support
+sudo pacman -S gvim
+```
 
-- Move the rc.conf file to ~/.config/ranger/
+Clone the repo:
 
-## rofi
+```sh
+git clone https://github.com/OscarM3615/vim.git .vim
+```
 
-Application launcher.
+Open vim and the plugins will install automatically.
 
-- Move the config file to ~/.config/rofi/
-- Move the onedark theme to ~/.local/share/rofi/themes/
+```sh
+vim
+```
