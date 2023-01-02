@@ -8,6 +8,12 @@ X server config.
 
 Move file .xprofile to ~
 
+## betterlockscreen
+
+Lock screen (i3lock wrapper).
+
+Move file to ~/.config/
+
 ## dunst
 
 Notifications daemon.
