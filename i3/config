@@ -100,6 +100,10 @@ bindsym $mod+Control+space floating toggle
 # Focus the parent container
 bindsym $mod+a focus parent
 
+# Bindings for scratchpad
+bindsym $mod+Prior scratchpad show
+bindsym $mod+Next move scratchpad
+
 # Define names for default workspaces
 set $ws1 "1: "
 set $ws2 "2"
@@ -171,7 +175,6 @@ bindsym $mod+Control+Right move workspace to output right
 # Assign applications to workspaces
 for_window [class="Thunar"] move to workspace $ws5
 for_window [class="discord"] move to workspace $ws8
-for_window [class="Droidcam"] move to workspace $ws8
 for_window [class="Google-chrome" title="ClickUp"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
