@@ -97,6 +97,9 @@ bindsym $mod+Shift+e layout toggle split
 # Toggle tiling / floating
 bindsym $mod+Control+space floating toggle
 
+# Focus the parent container
+bindsym $mod+a focus parent
+
 # Define names for default workspaces
 set $ws1 "1: "
 set $ws2 "2"
