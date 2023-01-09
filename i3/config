@@ -36,7 +36,7 @@ client.urgent           $red1   $red1           $black0 $red1
 exec --no-startup-id dex --autostart --environment i3
 
 # Enable auto lock for 5 minutes
-exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session" -detectsleep
+exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session" -detectsleep -corners 0-00
 
 # Start gnome keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
