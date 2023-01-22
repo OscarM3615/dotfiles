@@ -38,8 +38,11 @@ exec --no-startup-id dex --autostart --environment i3
 # Enable auto lock for 5 minutes
 exec --no-startup-id xautolock -time 5 -locker "loginctl lock-session" -detectsleep -corners 00--
 
-# Start gnome keyring
+# Start GNOME keyring
 exec --no-startup-id gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+
+# Start GNOME polkit agent
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # PulseAudio controls
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master 1+ toggle
