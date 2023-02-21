@@ -120,10 +120,10 @@ set $ws9 "9: "
 set $ws10 "10: "
 
 # Define variables for screens
-set $screen_left VGA-1
-set $screen_right LVDS-1
+set $screen_left VGA-0
+set $screen_right LVDS-0
 
-# Assign workspaces to screens (fallback to LVDS-1 when no dual monitor available)
+# Assign workspaces to screens (fallback to LVDS-0 when no dual monitor available)
 workspace $ws1 output $screen_left $screen_right
 workspace $ws2 output $screen_left $screen_right
 workspace $ws3 output $screen_left $screen_right
@@ -182,7 +182,10 @@ for_window [class="Google-chrome" title="ClickUp"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
 # Default floating windows
-for_window[class="Orage"] floating enable
+for_window [class="Orage"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="zoom" title="Zoom - Licensed Account"] floating disable
+for_window [class="zoom" title="Zoom Meeting"] floating disable
 
 # Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -218,7 +221,7 @@ bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+s exec --no-startup-id spotify
 
 # Start scripts
-exec --no-startup-id xrandr --output LVDS-1 --primary --mode 1366x768 --right-of VGA-1
+exec --no-startup-id xrandr --output LVDS-0 --primary --mode 1366x768 --right-of VGA-0
 exec_always --no-startup-id setxkbmap -model latitude -layout us,es -option 'compose:ralt,grp:shift_caps_toggle'
 exec_always --no-startup-id xset r rate 250 20
 exec --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Device Enabled" 0
