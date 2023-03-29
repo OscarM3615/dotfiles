@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Include local scripts in PATH
+export PATH="/home/oscarm3615/.local/bin:$PATH"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/oscarm3615/.oh-my-zsh"
 
