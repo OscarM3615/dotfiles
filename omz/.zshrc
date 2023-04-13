@@ -113,6 +113,7 @@ alias tree="lsd --tree"
 alias ,="vim"
 alias :q="exit"
 alias lgit="lazygit"
+alias kb="kanbanpy"
 
 unset LESS
 
