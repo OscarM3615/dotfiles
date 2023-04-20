@@ -178,7 +178,6 @@ bindsym $mod+Control+Right move workspace to output right
 # Assign applications to workspaces
 for_window [class="Thunar"] move to workspace $ws5
 for_window [class="discord"] move to workspace $ws8
-for_window [class="Google-chrome" title="ClickUp"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws10
 
 # Default floating windows
