@@ -228,7 +228,7 @@ exec_always --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint Stick" "Dev
 exec_always --no-startup-id xinput set-prop "AlpsPS/2 ALPS DualPoint TouchPad" "libinput Disable While Typing Enabled" 0
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpaper.png
-exec --no-startup-id picom -f -D 5 -i 0.85
+exec --no-startup-id picom -f -D 5 -i 1
 exec --no-startup-id dunst
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
