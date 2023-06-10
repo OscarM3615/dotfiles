@@ -94,12 +94,6 @@ export HIGHLIGHT_STYLE=base16/onedark
 # export LANG=en_US.UTF-8
 
 export EDITOR='vim'
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -114,8 +108,6 @@ alias ,="vim"
 alias :q="exit"
 alias lgit="lazygit"
 alias kb="kanbanpy"
-
-unset LESS
 
 unsetopt PROMPT_CR PROMPT_SP
 
