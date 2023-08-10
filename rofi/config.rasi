@@ -2,4 +2,4 @@ configuration {
 	disable-history: true;
 }
 
-@theme "/home/oscarm3615/.local/share/rofi/themes/onedark.rasi"
+@theme "/home/oscarm3615/.local/share/rofi/themes/catppuccin-mocha.rasi"
