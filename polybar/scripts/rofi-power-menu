@@ -213,7 +213,7 @@ else
                 if [ "$entry" = "$confirmation" ]
                 then
                     # Ask for confirmation
-                    echo -e "\0prompt\x1fAre you sure"
+                    echo -e "\0prompt\x1fAre you sure?"
                     echo -e "${confirmationMessages[$entry]}\0icon\x1f${icons[$entry]}"
                     echo -e "${confirmationMessages[cancel]}\0icon\x1f${icons[cancel]}"
                     exit 0
