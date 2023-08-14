@@ -9,6 +9,7 @@ configuration {
 	display-drun: "  Apps";
 	display-window: "  Window";
 	display-filebrowser: "  Files";
+	display-emoji: "Emoji";
 	sidebar-mode: true;
 }
 
