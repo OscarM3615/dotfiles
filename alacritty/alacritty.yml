@@ -27,6 +27,6 @@ font:
     family: Fira Code Nerd Font
     style: Italic
 
-  size: 11
+  size: 10
 
 custom_cursor_colors: true
