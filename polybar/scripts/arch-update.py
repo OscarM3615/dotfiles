@@ -52,7 +52,12 @@ def get_updates():
     return updates
 
 def get_aur_updates():
-    output = check_output(['yay', '-Qua']).decode('utf-8')
+    output = ''
+    try:
+        output = check_output(['yay', '-Qua']).decode('utf-8')
+    except subprocess.CalledProcessError as exc:
+        if not (exc.returncode == 1 and not exc.output):
+            raise exc
     if not output:
         return []
 
