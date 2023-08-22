@@ -2,7 +2,6 @@ configuration {
 	modi: "drun,window,filebrowser";
 	icon-theme: "Papirus Dark";
 	show-icons: true;
-	terminal: "qterminal";
 	location: 0;
 	disable-history: true;
 	hide-scrollbar: true;

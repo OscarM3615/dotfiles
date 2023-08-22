@@ -1,0 +1,32 @@
+import:
+  - ~/.config/alacritty/catppuccin-macchiato.yml
+
+window:
+  padding:
+    x: 8
+    y: 8
+
+  dynamic_padding: false
+  decorations: none
+  opacity: 0.85
+
+scrolling:
+  history: 1000
+  multiplier: 3
+
+font:
+  normal:
+    family: Fira Code Nerd Font
+    style: Regular
+
+  bold:
+    family: Fira Code Nerd Font
+    style: Bold
+
+  italic:
+    family: Fira Code Nerd Font
+    style: Italic
+
+  size: 11
+
+custom_cursor_colors: true

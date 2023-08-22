@@ -50,7 +50,10 @@ Install OhMyZSH following [its instructions](https://ohmyz.sh/).
 Link the dotfiles with the following commands:
 
 ```sh
+ln -s ~/.dotfiles/.profile ~
 ln -s ~/.dotfiles/.xprofile ~
+
+ln -s ~/.dotfiles/alacritty/ ~/.config/alacritty/
 
 ln -s ~/.dotfiles/betterlockscreen/betterlockscreenrc ~/.config/
 
@@ -66,10 +69,6 @@ ln -s ~/.dotfiles/omz/oscarm3615.zsh-theme ~/.oh-my-zsh/custom-themes/
 ln -s ~/.dotfiles/picom/ ~/.config/picom/
 
 ln -s ~/.dotfiles/polybar/ ~/.config/polybar/
-
-mkdir -p ~/.config/qterminal/
-mv ~/.dotfiles/qterminal/qterminal.ini ~/.config/qterminal/
-sudo mv ~/.dotfiles/qterminal/OneDark.colorscheme /usr/share/qtermwidget5/color-schemes/
 
 ln -s ~/.dotfiles/ranger/ ~/.config/ranger/
 

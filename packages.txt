@@ -1,4 +1,5 @@
 aircrack-ng
+alacritty
 android-tools
 apache
 audacity
@@ -63,7 +64,6 @@ polybar
 postman-bin
 protonvpn
 qpdfview
-qterminal
 ranger
 rofi
 screenkey
