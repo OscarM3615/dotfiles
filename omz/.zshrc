@@ -35,6 +35,8 @@ export HIGHLIGHT_STYLE=base16/onedark
 # Default editor
 export EDITOR='vim'
 
+# Fuzzy files args
+export FZF_DEFAULT_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
