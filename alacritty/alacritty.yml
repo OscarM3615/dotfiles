@@ -7,7 +7,7 @@ window:
     y: 8
 
   dynamic_padding: false
-  decorations: none
+  decorations: full
   opacity: 0.85
 
 scrolling:
