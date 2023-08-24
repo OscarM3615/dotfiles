@@ -7,6 +7,7 @@ window:
     y: 8
 
   dynamic_padding: false
+  dynamic_title: false
   decorations: full
   opacity: 0.85
 
