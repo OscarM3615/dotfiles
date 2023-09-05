@@ -28,3 +28,6 @@ font:
   size: 10
 
 custom_cursor_colors: true
+
+key_bindings:
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
