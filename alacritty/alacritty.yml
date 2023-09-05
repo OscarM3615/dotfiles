@@ -30,4 +30,4 @@ font:
 custom_cursor_colors: true
 
 key_bindings:
-  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
