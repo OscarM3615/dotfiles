@@ -22,6 +22,6 @@ try:
     if artist and title:
         print(result)
 except dbus.exceptions.DBusException:
-    pass
+    print('')
 except Exception as ex:
     print(ex)
