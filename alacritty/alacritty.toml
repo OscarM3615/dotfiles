@@ -1,0 +1,32 @@
+import = ["/home/oscarm3615/.config/alacritty/catppuccin-macchiato.toml"]
+
+[font]
+size = 10
+
+[font.bold]
+family = "Fira Code Nerd Font"
+
+[font.italic]
+family = "Fira Code Nerd Font"
+
+[font.normal]
+family = "Fira Code Nerd Font"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Super|Shift"
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[window]
+decorations = "full"
+dynamic_padding = false
+dynamic_title = false
+opacity = 0.85
+
+[window.padding]
+x = 8
+y = 8
