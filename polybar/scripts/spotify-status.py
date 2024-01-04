@@ -11,8 +11,10 @@ try:
 
     metadata = props.Get('org.mpris.MediaPlayer2.Player', 'Metadata')
 
-    artist = metadata.get('xesam:artist', ('',))[0]
-    title = metadata.get('xesam:title', '')
+    artist = metadata.get('xesam:artist')[0] if metadata.get(
+        'xesam:artist') else ''
+    title = metadata.get('xesam:title') if metadata.get(
+        'xesam:title') else ''
 
     result = OUTPUT_FORMAT.format(title=title, artist=artist)
 
