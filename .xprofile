@@ -1,4 +1,4 @@
 export QT_STYLE_OVERRIDE="kvantum"
 
 xset -b
-xss-lock -- betterlockscreen -q -l blur &
+# xss-lock -- betterlockscreen -q -l blur &
