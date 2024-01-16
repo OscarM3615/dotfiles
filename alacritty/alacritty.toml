@@ -15,7 +15,7 @@ family = "Fira Code Nerd Font"
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
 key = "Return"
-mods = "Super|Shift"
+mods = "Control|Shift"
 
 [scrolling]
 history = 1000
