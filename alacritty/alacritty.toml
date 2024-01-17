@@ -1,5 +1,8 @@
 import = ["/home/oscarm3615/.config/alacritty/catppuccin-macchiato.toml"]
 
+[env]
+TERM = "xterm-256color"
+
 [font]
 size = 10
 
