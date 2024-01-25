@@ -30,10 +30,6 @@ dynamic_padding = false
 dynamic_title = false
 opacity = 0.85
 
-[window.padding]
-x = 8
-y = 8
-
 [window.dimensions]
 lines = 30
 columns = 100
