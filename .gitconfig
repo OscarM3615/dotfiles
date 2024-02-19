@@ -1,0 +1,11 @@
+[include]
+	path = .gitconfig.local
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[delta]
+	syntax-theme = Catppuccin-macchiato
