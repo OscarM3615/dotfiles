@@ -1,7 +1,12 @@
 # OscarM3615 dotfiles
 
-To install:
+Dotfiles managed using GNU stow.
 
 ```sh
+sudo pacman -S stow
+
+git clone https://github.com/OscarM3615/dotfiles.git .dotfiles
+cd .dotfiles
+
 stow .
 ```
