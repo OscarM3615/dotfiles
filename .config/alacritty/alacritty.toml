@@ -3,33 +3,24 @@ import = ["/home/oscarm3615/.config/alacritty/catppuccin-macchiato.toml"]
 [env]
 TERM = "xterm-256color"
 
-[font]
-size = 10
-
-[font.bold]
-family = "Fira Code Nerd Font"
-
-[font.italic]
-family = "Fira Code Nerd Font"
-
-[font.normal]
-family = "Fira Code Nerd Font"
-
-[[keyboard.bindings]]
-action = "SpawnNewInstance"
-key = "Return"
-mods = "Control|Shift"
-
-[scrolling]
-history = 1000
-multiplier = 3
-
 [window]
+dimensions = { lines = 30, columns = 100 }
 decorations = "full"
 dynamic_padding = false
 dynamic_title = false
 opacity = 0.85
 
-[window.dimensions]
-lines = 30
-columns = 100
+[font]
+size = 10
+normal = { family = "Fira Code Nerd Font" }
+bold = { family = "Fira Code Nerd Font" }
+italic = { family = "Fira Code Nerd Font" }
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[keyboard]
+bindings = [
+ { key = "Return", mods = "Super|Shift", action = "SpawnNewInstance" }
+]
